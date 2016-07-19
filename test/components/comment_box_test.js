@@ -29,7 +29,8 @@ describe('CommentBox', () => {
         });
 
         it('when submitted, clears the input', () => {
-//             expect(component).;
+            component.simulate('submit');
+            expect(component.find('textarea')).to.have.value('');
         });
     });
 });
