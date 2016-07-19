@@ -5,7 +5,7 @@ export default class CommentBox extends Component {
         return (
             <div className="comment-box">
                 <textarea />
-                <button>Submit Commetn</button>
+                <button>Submit Comment</button>
             </div>
         );
     }
