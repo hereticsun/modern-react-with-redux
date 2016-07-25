@@ -9,6 +9,8 @@ import App from './components/app';
 import Signin from './components/auth/signin';
 import Signout from './components/auth/signout';
 import Signup from './components/auth/signup';
+import Feature from './components/feature';
+import RequireAuth from './components/auth/require_auth';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
@@ -20,6 +22,7 @@ ReactDOM.render(
                 <Router path="signin" component={Signin} />
                 <Router path="signout" component={Signout} />
                 <Router path="signup" component={Signup} />
+                <Router path="feature" component={RequireAuth(Feature)} />
             </Route>
         </Router>
     </Provider>
